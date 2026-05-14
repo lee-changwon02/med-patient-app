@@ -1,0 +1,18 @@
+{
+  "name": "복약 관리",
+  "short_name": "복약관리",
+  "description": "복약 일정 및 건강 상태 관리 앱",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1B3A6B",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
