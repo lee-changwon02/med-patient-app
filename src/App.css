@@ -229,6 +229,19 @@ select.inp {
   background: linear-gradient(160deg, var(--navy-d), var(--navy));
 }
 
+/* ─── AI typing indicator ─── */
+@keyframes typing-bounce {
+  0%, 80%, 100% { transform: translateY(0);   opacity: 0.35; }
+  40%           { transform: translateY(-4px); opacity: 1;    }
+}
+.typing-dot {
+  display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+  background: #94A3B8; margin: 0 2px;
+  animation: typing-bounce 1.2s infinite ease-in-out;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.typing-dot:nth-child(3) { animation-delay: 0.30s; }
+
 @media print {
   .bnav, .hdr-btn { display: none !important; }
   body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
