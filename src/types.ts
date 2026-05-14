@@ -82,7 +82,7 @@ export interface Checkup {
 }
 
 export interface AppState {
-  tab: 'home' | 'meds' | 'checkin' | 'checkup' | 'report';
+  tab: 'home' | 'meds' | 'checkin' | 'checkup' | 'report' | 'ai';
   meds: Medication[];
   logs: AllLogs;
   checkins: Checkin[];

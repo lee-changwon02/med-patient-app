@@ -10,6 +10,7 @@ import CheckinForm from './components/CheckinForm';
 import CheckupForm from './components/CheckupForm';
 import OcrImport from './components/OcrImport';
 import ReportView from './components/ReportView';
+import AiChat from './components/AiChat';
 import Toast from './components/Toast';
 import type { ToastType } from './components/Toast';
 
@@ -973,6 +974,7 @@ export default function App() {
     checkin: renderCheckin,
     checkup: renderCheckup,
     report:  () => <ReportView state={state} />,
+    ai:      () => <AiChat state={state} />,
   };
 
   return (
@@ -987,6 +989,7 @@ export default function App() {
           ['meds',   '약',    'M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18'],
           ['checkin','상태',   'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'],
           ['checkup','검진',   'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2'],
+          ['ai',     'AI',    'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'],
           ['report', '보고서', 'M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'],
         ] as [AppState['tab'], string, string][]).map(([id, label, path]) => (
           <button
